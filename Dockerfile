@@ -28,10 +28,8 @@ RUN wget -q "https://www.fadeinpro.com/dl/linux/fadein_${FADEIN_VERSION}_amd64.d
     && dpkg -i /tmp/fadein.deb || apt-get install -yf \
     && rm /tmp/fadein.deb
 
-# Create default autostart entry so Fade-In launches with the desktop
-RUN mkdir -p /defaults/autostart && \
-    printf '[Desktop Entry]\nType=Application\nName=Fade-In\nExec=fadein\nX-GNOME-Autostart-enabled=true\n' \
-    > /defaults/autostart/fadein.desktop
+# Append Fade-In to the webtop autostart script (the file already exists in the base image)
+RUN echo '/usr/bin/fadein &' >> /defaults/autostart
 
 # Expose the WebUI port (KasMVNC via webtop)
 EXPOSE 3001
