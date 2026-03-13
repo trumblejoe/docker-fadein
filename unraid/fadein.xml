@@ -9,7 +9,7 @@
   <Support>https://github.com/trumblejoe/docker-fadein/issues</Support>
   <Project>https://www.fadeinpro.com</Project>
   <Overview>
-    Fade-In Professional is a full-featured screenwriting application. This container runs Fade-In inside a KDE desktop environment accessible through your browser via KasMVNC (port 3000). No VNC client required — just open the WebUI link.
+    Fade-In Professional is a full-featured screenwriting application. This container runs Fade-In inside a KDE desktop environment accessible through your browser via KasMVNC (port 3001). No VNC client required — just open the WebUI link.
 
     [br][br]
     [b]First run:[/b] Allow a moment for the desktop to initialize, then Fade-In will launch automatically.
@@ -17,7 +17,7 @@
     [b]Data persistence:[/b] All Fade-In preferences, projects, and configuration are stored in the /config volume.
   </Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/trumblejoe/docker-fadein/main/unraid/fadein.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/trumblejoe/docker-fadein/main/fadein-icon.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
@@ -31,8 +31,8 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>3000</HostPort>
-        <ContainerPort>3000</ContainerPort>
+        <HostPort>3001</HostPort>
+        <ContainerPort>3001</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>

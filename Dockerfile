@@ -34,7 +34,7 @@ RUN mkdir -p /defaults/autostart && \
     > /defaults/autostart/fadein.desktop
 
 # Expose the WebUI port (KasMVNC via webtop)
-EXPOSE 3000
+EXPOSE 3001
 
 # Volumes
 VOLUME ["/config"]
