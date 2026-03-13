@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>fade-in</Name>
-  <Repository>trumblejoe/fadein:latest</Repository>
-  <Registry>https://hub.docker.com/r/trumblejoe/fadein</Registry>
+  <Repository>violentone/fadein:latest</Repository>
+  <Registry>https://hub.docker.com/r/violentone/fadein</Registry>
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
